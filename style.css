@@ -1,0 +1,65 @@
+:root {
+  --ink: #08051e; --night: #1a0c45; --violet: #3a1470; --magenta: #e0408a;
+  --gold: #ffd678; --cyan: #78e6ff; --text: #ece8ff; --muted: #b4acd8; --card: rgba(255,255,255,.06);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--ink); }
+body {
+  margin: 0; color: var(--text); font: 17px/1.55 "Nunito", system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--ink) 0%, var(--night) 35%, var(--violet) 75%, #4a1050 100%);
+  min-height: 100vh; overflow-x: hidden;
+}
+a { color: var(--cyan); }
+.copper { position: fixed; inset: 0; pointer-events: none; z-index: -1; opacity: .35; }
+.copper i { position: absolute; left: 0; right: 0; height: 90px; animation: bar 9s ease-in-out infinite alternate; }
+.copper i:nth-child(1) { background: linear-gradient(transparent, #ff7a3c, transparent); }
+.copper i:nth-child(2) { background: linear-gradient(transparent, #3cc8ff, transparent); animation-duration: 11s; animation-delay: -4s; }
+.copper i:nth-child(3) { background: linear-gradient(transparent, #ff3ca8, transparent); animation-duration: 13s; animation-delay: -7s; }
+@keyframes bar { from { top: 5%; } to { top: 85%; } }
+@media (prefers-reduced-motion: reduce) { .copper i { animation: none; top: 30%; } }
+
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; max-width: 1100px; margin: 0 auto; }
+.brand { font: 12px "Press Start 2P", monospace; color: var(--gold); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.langs { display: flex; gap: 4px; }
+.langs button { font: 10px "Press Start 2P", monospace; background: transparent; color: var(--muted); border: 2px solid transparent; padding: 7px 8px; cursor: pointer; }
+.langs button.on { color: var(--ink); background: var(--gold); border-color: #fff4cc #8a6a20 #8a6a20 #fff4cc; }
+
+main, footer { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+.hero { text-align: center; padding: 24px 0 8px; }
+.icon { width: 200px; height: 200px; border-radius: 22.5%; box-shadow: 0 20px 60px rgba(224,64,138,.45), 0 0 0 3px rgba(255,214,120,.35); }
+h1 { font: clamp(26px, 7vw, 54px) "Press Start 2P", monospace; letter-spacing: 2px; margin: 28px 0 10px;
+  background: linear-gradient(180deg, #fff 0%, var(--gold) 55%, #ff9a4a 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: 0 4px 0 rgba(0,0,0,.25); }
+.tag { font-size: clamp(20px, 4vw, 28px); font-weight: 900; color: var(--gold); margin: 0 0 8px; }
+.lead { max-width: 640px; margin: 0 auto 22px; color: var(--muted); }
+.store { display: inline-block; padding: 14px 22px; border-radius: 12px; background: #000; color: #fff; text-decoration: none; font-weight: 700;
+  border: 1px solid rgba(255,255,255,.3); }
+.store[aria-disabled="true"] { opacity: .75; pointer-events: none; }
+
+.shots { margin: 36px -16px 8px; }
+.rail { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 16px 18px; }
+.rail img { height: min(70vh, 620px); aspect-ratio: 1320 / 2868; border-radius: 18px; scroll-snap-align: center; flex: none;
+  box-shadow: 0 14px 40px rgba(0,0,0,.5); background: var(--card); }
+
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 26px 0; }
+.card { background: var(--card); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 18px 20px; }
+.card h2, .games h2 { font: 14px "Press Start 2P", monospace; color: var(--gold); margin: 0 0 10px; }
+.card p { margin: 0; color: var(--muted); }
+
+.games ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 18px; }
+.games li { display: flex; flex-direction: column; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+.games li b { color: #fff; } .games li span { color: var(--muted); font-size: 15px; }
+
+.feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 34px 0; }
+.feat div { background: var(--card); border-radius: 14px; padding: 16px; }
+.feat b { display: block; font: 13px "Press Start 2P", monospace; color: var(--cyan); margin-bottom: 8px; }
+.feat span { color: var(--muted); font-size: 15px; }
+
+footer { text-align: center; color: var(--muted); padding: 30px 16px 50px; font-size: 14px; }
+
+/* Textové stránky (ochrana súkromia, podpora) */
+.doc { max-width: 760px; margin: 10px auto 0; background: rgba(8,5,30,.55); border: 1px solid rgba(255,255,255,.1); border-radius: 18px; padding: 24px 22px; }
+.doc h1 { font-size: clamp(18px, 4vw, 26px); margin-top: 0; }
+.doc h2 { font: 12px "Press Start 2P", monospace; color: var(--gold); margin: 26px 0 8px; }
+.doc p, .doc li { color: var(--text); }

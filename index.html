@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unsolvable – Je to o hraní, nie o výhre</title>
+<meta name="description" content="Deväť retro hier pre iPhone, iPad a Mac: logika, plošinovka, preteky a RPG. Bez reklám, bez háčikov.">
+<meta property="og:title" content="Unsolvable">
+<meta property="og:description" content="Just play. Don't win. Nine retro games for iPhone, iPad and Mac.">
+<meta property="og:image" content="https://dzanino.github.io/just-play/assets/og.jpg">
+<meta property="og:url" content="https://dzanino.github.io/just-play/">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="copper" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="top">
+  <a class="brand" href="./"><img src="assets/favicon.png" alt=""> UNSOLVABLE</a>
+  <nav class="langs" aria-label="Language">
+    <button data-lang="sk">SK</button><button data-lang="en">EN</button><button data-lang="pl">PL</button><button data-lang="de">DE</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="icon" src="assets/icon.png" alt="Unsolvable app icon" width="200" height="200">
+    <h1>UNSOLVABLE</h1>
+    <p class="tag" data-i18n="tag">Je to o hraní, nie o výhre.</p>
+    <p class="lead" data-i18n="lead">Deväť retro hier pre iPhone, iPad a Mac. Logika, plošinovka, preteky aj RPG – rýchle, s vlastnou hudbou. Bez reklám, bez háčikov.</p>
+    <a class="store" id="store" href="#" aria-disabled="true"><span data-i18n="soon">Čoskoro v App Store</span></a>
+  </section>
+
+  <section class="shots" aria-label="Screenshots">
+    <div class="rail" id="rail"></div>
+  </section>
+
+  <section class="modes">
+    <div class="card"><h2 data-i18n="m1h">HRA</h2><p data-i18n="m1">Úrovne, ktoré sa dajú vyhrať. Každá ďalšia je o kúsok ťažšia.</p></div>
+    <div class="card"><h2 data-i18n="m2h">PARADOX</h2><p data-i18n="m2">Verzie, ktoré vyhrať nejde. Tlačidlo PREČO NIE ukáže matematický dôkaz.</p></div>
+  </section>
+
+  <section class="games">
+    <h2 data-i18n="gh">Deväť hier</h2>
+    <ul id="games"></ul>
+  </section>
+
+  <section class="feat">
+    <div><b>1985 / 1993</b><span data-i18n="f1">Hrubé pixely alebo hladká 256-farebná grafika.</span></div>
+    <div><b>17 ♫</b><span data-i18n="f2">Originálne skladby zo štvorkanálového čipu.</span></div>
+    <div><b>EXEC</b><span data-i18n="f3">Hry sa ovplyvňujú navzájom ako úlohy na starom počítači.</span></div>
+    <div><b data-i18n="f4h">BEZ REKLÁM</b><span data-i18n="f4">Žiadne reklamy, nákupy ani sledovanie. Jedna cena.</span></div>
+  </section>
+</main>
+
+<footer>
+  <p><a href="privacy.html" data-i18n="privacy">Ochrana súkromia</a> · <a href="support.html" data-i18n="support">Podpora</a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+const GAMES = {
+  sk: [["Pätnástka","posúvačka s háčikom v parite"],["Svetlá","zhasni všetky svetlá"],["Piškvorky","súper nerobí chyby"],["Domino","pokry šachovnicu"],["Veža","mnísi pracujú, aj keď hráš inde"],["Sisyfos","plošinovka s kameňom a kombom"],["Okruh","nočné preteky so závetrím"],["Exec","okná sa množia"],["Hydra","za každú hlavu dve"]],
+  en: [["Fifteen","sliding puzzle with a parity twist"],["Lights","switch them all off"],["Tic-Tac-Toe","an opponent without mistakes"],["Domino","cover the chessboard"],["Tower","the monks keep working"],["Sisyphus","boulder platformer with combos"],["Circuit","night racing with slipstream"],["Exec","windows multiply"],["Hydra","cut one head, two grow back"]],
+  pl: [["Piętnastka","układanka z haczykiem"],["Światła","zgaś wszystkie"],["Kółko i krzyżyk","przeciwnik bez błędów"],["Domino","pokryj szachownicę"],["Wieża","mnisi pracują dalej"],["Syzyf","platformówka z głazem"],["Tor","nocne wyścigi"],["Exec","okna się mnożą"],["Hydra","za każdą głowę dwie"]],
+  de: [["15-Puzzle","Schiebepuzzle mit Haken"],["Lichter","schalte alle aus"],["Tic-Tac-Toe","ein Gegner ohne Fehler"],["Domino","bedecke das Schachbrett"],["Turm","die Mönche arbeiten weiter"],["Sisyphos","Jump'n'Run mit Felsbrocken"],["Rundkurs","Nachtrennen mit Windschatten"],["Exec","Fenster vermehren sich"],["Hydra","für jeden Kopf zwei"]]
+};
+const SHOT_LANG = { sk: "sk", en: "en-US", pl: "pl", de: "de-DE" };
+function renderPage(lang) {
+  document.getElementById("games").innerHTML = GAMES[lang].map(([n, d]) => `<li><b>${n}</b><span>${d}</span></li>`).join("");
+  const rail = document.getElementById("rail");
+  rail.innerHTML = [1, 2, 3, 4, 5, 6].map(i => `<img loading="lazy" src="assets/shots/${SHOT_LANG[lang]}/0${i}.jpg" alt="" onerror="this.remove()">`).join("");
+}
+I18N.init(renderPage);
+</script>
+</body>
+</html>

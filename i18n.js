@@ -3,7 +3,7 @@ const I18N = (() => {
   const T = {
     sk: {
       tag: "Je to o hraní, nie o výhre.",
-      lead: "Deväť retro hier pre iPhone, iPad a Mac. Logika, plošinovka, preteky aj RPG – rýchle, s vlastnou hudbou. Bez reklám, bez háčikov.",
+      lead: "Deväť retro hier pre iPhone, iPad a Mac, Workbench s disketami, 12 vajíčok a tri kľúče k skrytej Diskete 2. Bez reklám, bez háčikov.",
       soon: "Čoskoro v App Store", m1h: "HRA", m1: "Úrovne, ktoré sa dajú vyhrať. Každá ďalšia je o kúsok ťažšia.",
       m2h: "PARADOX", m2: "Verzie, ktoré vyhrať nejde. Tlačidlo PREČO NIE ukáže matematický dôkaz.",
       gh: "Deväť hier", f1: "Hrubé pixely alebo hladká 256-farebná grafika.", f2: "Originálne skladby zo štvorkanálového čipu.",
@@ -12,7 +12,7 @@ const I18N = (() => {
     },
     en: {
       tag: "Just play. Don't win.",
-      lead: "Nine retro games for iPhone, iPad and Mac. Logic, platformer, racing and RPG – quick, each with its own music. No ads, no hooks.",
+      lead: "Nine retro games for iPhone, iPad and Mac, a Workbench full of floppies, 12 Easter eggs and three keys to the hidden Disk 2. No ads, no hooks.",
       soon: "Coming soon to the App Store", m1h: "PLAY", m1: "Levels you can win. Each one a little harder.",
       m2h: "PARADOX", m2: "Versions you can never win. The WHY NOT button shows the mathematical proof.",
       gh: "Nine games", f1: "Chunky pixels or smooth 256-colour art.", f2: "Original tracks from a four-channel sound chip.",
@@ -21,7 +21,7 @@ const I18N = (() => {
     },
     pl: {
       tag: "Liczy się gra, nie wygrana.",
-      lead: "Dziewięć gier retro na iPhone'a, iPada i Maca. Logika, platformówka, wyścigi i RPG – szybkie, każda z własną muzyką. Bez reklam, bez haczyków.",
+      lead: "Dziewięć gier retro na iPhone'a, iPada i Maca, Workbench z dyskietkami, 12 jajek i trzy klucze do ukrytej Dyskietki 2. Bez reklam, bez haczyków.",
       soon: "Wkrótce w App Store", m1h: "GRA", m1: "Poziomy, które da się wygrać. Każdy trochę trudniejszy.",
       m2h: "PARADOKS", m2: "Wersje nie do wygrania. Przycisk DLACZEGO NIE pokazuje dowód matematyczny.",
       gh: "Dziewięć gier", f1: "Grube piksele albo gładka grafika w 256 kolorach.", f2: "Oryginalne utwory z czterokanałowego układu.",
@@ -30,7 +30,7 @@ const I18N = (() => {
     },
     de: {
       tag: "Spielen statt gewinnen.",
-      lead: "Neun Retro-Spiele für iPhone, iPad und Mac. Logik, Jump'n'Run, Rennen und RPG – schnell, jedes mit eigener Musik. Keine Werbung, keine Haken.",
+      lead: "Neun Retro-Spiele für iPhone, iPad und Mac, eine Workbench voller Disketten, 12 Easter Eggs und drei Schlüssel zur versteckten Disk 2. Keine Werbung, keine Haken.",
       soon: "Bald im App Store", m1h: "SPIEL", m1: "Level, die man gewinnen kann. Jedes etwas schwerer.",
       m2h: "PARADOX", m2: "Versionen, die man nie gewinnt. WARUM NICHT zeigt den mathematischen Beweis.",
       gh: "Neun Spiele", f1: "Grobe Pixel oder glatte 256-Farben-Grafik.", f2: "Originale Stücke aus einem Vierkanal-Soundchip.",

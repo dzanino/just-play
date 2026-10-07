@@ -1,8 +1,8 @@
-# Unsolvable – Just play. Don't win.
+# Next Player Ready – web
 
-Web hry **Unsolvable** pre iPhone, iPad a Mac: https://dzanino.github.io/just-play/
+Statický web (bez buildu): `index.html`, `privacy.html`, `support.html`.
+- Texty: `i18n.js` (SK/EN/PL/DE) a priamo v `privacy.html` / `support.html`.
+- Kontaktný e-mail: `contact.js` (jeden riadok).
+- Screenshoty: `assets/shots/<jazyk>/01–06.jpg` (z `AppStore/screenshots/framed/.../iphone-6.9`).
 
-- [Ochrana súkromia / Privacy Policy](https://dzanino.github.io/just-play/privacy.html)
-- [Podpora / Support](https://dzanino.github.io/just-play/support.html)
-
-© 2026 Ján Šikuta
+Zverejnené cez GitHub Pages z repozitára `dzanino/just-play` → https://dzanino.github.io/just-play/ (kópia tohto priečinka).

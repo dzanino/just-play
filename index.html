@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Next Player Ready – insert disk in df0:</title>
-<meta name="description" content="Deväť retro hier pre iPhone, iPad a Mac: logika, plošinovka, preteky a RPG. Bez reklám, bez háčikov.">
+<meta name="description" content="Desať retro hier pre iPhone, iPad a Mac: logika, plošinovka, preteky, RPG a dve hry z Atari 800XL. Bez reklám, bez háčikov.">
 <meta property="og:title" content="Next Player Ready">
-<meta property="og:description" content="Just play. Don't win. Nine retro games for iPhone, iPad and Mac.">
+<meta property="og:description" content="Just play. Don't win. Ten retro games for iPhone, iPad and Mac.">
 <meta property="og:image" content="https://dzanino.github.io/just-play/assets/og.jpg">
 <meta property="og:url" content="https://dzanino.github.io/just-play/">
 <link rel="icon" href="assets/favicon.png">
@@ -30,7 +30,7 @@
     <img class="icon" src="assets/icon.png" alt="Next Player Ready app icon" width="200" height="200">
     <h1>NEXT PLAYER READY</h1>
     <p class="tag" data-i18n="tag">Je to o hraní, nie o výhre.</p>
-    <p class="lead" data-i18n="lead">Deväť retro hier pre iPhone, iPad a Mac, Workbench s disketami, 12 vajíčok a tri kľúče k skrytej Diskete 2. Bez reklám, bez háčikov.</p>
+    <p class="lead" data-i18n="lead">Desať retro hier pre iPhone, iPad a Mac z čias Atari 800XL a Amigy, Workbench s disketami, 12 vajíčok a tri kľúče k skrytej Diskete 2. Bez reklám, bez háčikov.</p>
     <a class="store" id="store" href="#" aria-disabled="true"><span data-i18n="soon">Čoskoro v App Store</span></a>
   </section>
 
@@ -44,7 +44,7 @@
   </section>
 
   <section class="games">
-    <h2 data-i18n="gh">Deväť hier</h2>
+    <h2 data-i18n="gh">Desať hier</h2>
     <ul id="games"></ul>
   </section>
 
@@ -64,16 +64,16 @@
 <script src="i18n.js"></script>
 <script>
 const GAMES = {
-  sk: [["Pätnástka","posúvačka s háčikom v parite"],["Svetlá","zhasni všetky svetlá"],["Piškvorky","súper nerobí chyby"],["Domino","pokry šachovnicu"],["Veža","mnísi pracujú, aj keď hráš inde"],["Sisyfos","plošinovka s kameňom a kombom"],["Okruh","nočné preteky so závetrím"],["Exec","okná sa množia"],["Hydra","za každú hlavu dve"]],
-  en: [["Fifteen","sliding puzzle with a parity twist"],["Lights","switch them all off"],["Tic-Tac-Toe","an opponent without mistakes"],["Domino","cover the chessboard"],["Tower","the monks keep working"],["Sisyphus","boulder platformer with combos"],["Circuit","night racing with slipstream"],["Exec","windows multiply"],["Hydra","cut one head, two grow back"]],
-  pl: [["Piętnastka","układanka z haczykiem"],["Światła","zgaś wszystkie"],["Kółko i krzyżyk","przeciwnik bez błędów"],["Domino","pokryj szachownicę"],["Wieża","mnisi pracują dalej"],["Syzyf","platformówka z głazem"],["Tor","nocne wyścigi"],["Exec","okna się mnożą"],["Hydra","za każdą głowę dwie"]],
-  de: [["15-Puzzle","Schiebepuzzle mit Haken"],["Lichter","schalte alle aus"],["Tic-Tac-Toe","ein Gegner ohne Fehler"],["Domino","bedecke das Schachbrett"],["Turm","die Mönche arbeiten weiter"],["Sisyphos","Jump'n'Run mit Felsbrocken"],["Rundkurs","Nachtrennen mit Windschatten"],["Exec","Fenster vermehren sich"],["Hydra","für jeden Kopf zwei"]]
+  sk: [["Pätnástka","posúvačka s háčikom v parite"],["Svetlá","zhasni všetky svetlá"],["Piškvorky","súper nerobí chyby"],["Veža","mnísi pracujú, aj keď hráš inde"],["Sisyfos","plošinovka s kameňom a kombom"],["Okruh","nočné preteky so závetrím"],["Exec","okná sa množia"],["Hydra","za každú hlavu dve"],["Stíhačka","Atari 800XL: štart z lietadlovej lode, bomby a zameriavač"],["Kosačka","Atari 800XL: pokos trávnik, pozor na psa a susedove kvety"]],
+  en: [["Fifteen","sliding puzzle with a parity twist"],["Lights","switch them all off"],["Tic-Tac-Toe","an opponent without mistakes"],["Tower","the monks keep working"],["Sisyphus","boulder platformer with combos"],["Circuit","night racing with slipstream"],["Exec","windows multiply"],["Hydra","cut one head, two grow back"],["Fighter","Atari 800XL: take off from a carrier, bombs and a sight"],["Mower","Atari 800XL: mow the lawn, mind the dog and the neighbour's flowers"]],
+  pl: [["Piętnastka","układanka z haczykiem"],["Światła","zgaś wszystkie"],["Kółko i krzyżyk","przeciwnik bez błędów"],["Wieża","mnisi pracują dalej"],["Syzyf","platformówka z głazem"],["Tor","nocne wyścigi"],["Exec","okna się mnożą"],["Hydra","za każdą głowę dwie"],["Myśliwiec","Atari 800XL: start z lotniskowca, bomby i celownik"],["Kosiarka","Atari 800XL: skoś trawnik, uważaj na psa i kwiaty sąsiada"]],
+  de: [["15-Puzzle","Schiebepuzzle mit Haken"],["Lichter","schalte alle aus"],["Tic-Tac-Toe","ein Gegner ohne Fehler"],["Turm","die Mönche arbeiten weiter"],["Sisyphos","Jump'n'Run mit Felsbrocken"],["Rundkurs","Nachtrennen mit Windschatten"],["Exec","Fenster vermehren sich"],["Hydra","für jeden Kopf zwei"],["Jäger","Atari 800XL: Start vom Träger, Bomben und Visier"],["Rasenmäher","Atari 800XL: Rasen mähen, Vorsicht vor Hund und Nachbars Blumen"]]
 };
 const SHOT_LANG = { sk: "sk", en: "en-US", pl: "pl", de: "de-DE" };
 function renderPage(lang) {
   document.getElementById("games").innerHTML = GAMES[lang].map(([n, d]) => `<li><b>${n}</b><span>${d}</span></li>`).join("");
   const rail = document.getElementById("rail");
-  rail.innerHTML = [1, 2, 3, 4, 5, 6, 7, 8].map(i => `<img loading="lazy" src="assets/shots/${SHOT_LANG[lang]}/0${i}.jpg" alt="" onerror="this.remove()">`).join("");
+  rail.innerHTML = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => `<img loading="lazy" src="assets/shots/${SHOT_LANG[lang]}/${String(i).padStart(2, "0")}.jpg" alt="" onerror="this.remove()">`).join("");
 }
 I18N.init(renderPage);
 </script>

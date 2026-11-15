@@ -50,9 +50,9 @@
 
   <section class="feat">
     <div><b>1985 / 1993</b><span data-i18n="f1">Hrubé pixely alebo hladká 256-farebná grafika.</span></div>
-    <div><b>17 + 28 ♫</b><span data-i18n="f2">Skladby zo štvorkanálového čipu a jukebox s 28 nahranými skladbami od Amigy 1992 po Korg 2026. Pribúdajú hraním.</span></div>
+    <div><b>17 + 27 ♫</b><span data-i18n="f2">Skladby zo štvorkanálového čipu a jukebox s 27 nahranými skladbami z Amigy, PC aj Korgu, od roku 1994 po 2026. Pribúdajú hraním.</span></div>
     <div><b>EXEC</b><span data-i18n="f3">Hry sa ovplyvňujú navzájom ako úlohy na starom počítači.</span></div>
-    <div><b data-i18n="f4h">BEZ REKLÁM</b><span data-i18n="f4">Žiadne reklamy ani sledovanie. Jedna cena, v hrách nič nedokupuješ. Minca INSERT COIN je len dobrovoľné poďakovanie.</span></div>
+    <div><b data-i18n="f4h">BEZ REKLÁM</b><span data-i18n="f4">Žiadne reklamy ani sledovanie. Jedna cena, v hrách nič nedokupuješ. Celý album hudby si môžeš kúpiť naraz alebo ho dostaneš hraním.</span></div>
   </section>
 </main>
 
@@ -73,7 +73,7 @@ const SHOT_LANG = { sk: "sk", en: "en-US", pl: "pl", de: "de-DE" };
 function renderPage(lang) {
   document.getElementById("games").innerHTML = GAMES[lang].map(([n, d]) => `<li><b>${n}</b><span>${d}</span></li>`).join("");
   const rail = document.getElementById("rail");
-  rail.innerHTML = [1, 2, 3, 4, 5, 6, 7].map(i => `<img loading="lazy" src="assets/shots/${SHOT_LANG[lang]}/0${i}.jpg" alt="" onerror="this.remove()">`).join("");
+  rail.innerHTML = [1, 2, 3, 4, 5, 6, 7, 8].map(i => `<img loading="lazy" src="assets/shots/${SHOT_LANG[lang]}/0${i}.jpg" alt="" onerror="this.remove()">`).join("");
 }
 I18N.init(renderPage);
 </script>

@@ -63,3 +63,18 @@ footer { text-align: center; color: var(--muted); padding: 30px 16px 50px; font-
 .doc h1 { font-size: clamp(18px, 4vw, 26px); margin-top: 0; }
 .doc h2 { font: 12px "Press Start 2P", monospace; color: var(--gold); margin: 26px 0 8px; }
 .doc p, .doc li { color: var(--text); }
+
+/* App Store: oficiálny odznak a vedľa retro tlačidlo ako gadget z Workbench (stlačené sa vtlačí) */
+.cta { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-top: 6px; }
+.badge img { display: block; height: 60px; width: auto; }
+.retro { display: inline-flex; align-items: center; gap: 12px; padding: 14px 18px; text-decoration: none;
+  font: clamp(9px, 3.2vw, 12px)/1.4 "Press Start 2P", monospace; color: #1b1f4a; background: #aab0c8; max-width: 100%; box-sizing: border-box;
+  border: 3px solid; border-color: #ffffff #2a2e55 #2a2e55 #ffffff; box-shadow: 4px 4px 0 rgba(0,0,0,.45); }
+.retro:hover { background: #bfc5dc; }
+.retro:active { border-color: #2a2e55 #ffffff #ffffff #2a2e55; transform: translate(2px, 2px); box-shadow: 2px 2px 0 rgba(0,0,0,.45); }
+.retro .disk { width: 28px; height: 28px; image-rendering: pixelated; flex: none; }
+.retro span { text-transform: uppercase; white-space: nowrap; }
+.retro .cur { font-style: normal; animation: blink 1s steps(1) infinite; margin-left: -6px; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .retro .cur { animation: none; } }
+@media (max-width: 380px) { .retro { padding: 12px 12px; gap: 8px; } .retro .disk { width: 22px; height: 22px; } }

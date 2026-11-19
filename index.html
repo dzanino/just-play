@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 <div class="copper" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -31,7 +31,10 @@
     <h1>NEXT PLAYER READY</h1>
     <p class="tag" data-i18n="tag">Je to o hraní, nie o výhre.</p>
     <p class="lead" data-i18n="lead">Desať retro hier pre iPhone, iPad a Mac z čias Atari 800XL a Amigy, Workbench s disketami, 12 vajíčok a tri kľúče k skrytej Diskete 2. Bez reklám, bez háčikov.</p>
-    <a class="store" id="store" href="https://apps.apple.com/app/id6819291670"><span data-i18n="soon">Stiahnuť v App Store</span></a>
+    <div class="cta">
+      <a class="badge" href="https://apps.apple.com/app/id6819291670"><img src="assets/badge/appstore.svg" alt="Download on the App Store" width="180" height="60"></a>
+      <a class="retro" href="https://apps.apple.com/app/id6819291670" aria-label="App Store"><svg class="disk" viewBox="0 0 16 16" aria-hidden="true"><path fill="#1b1f4a" d="M1 1h12l2 2v12H1z"/><path fill="#cfd3e6" d="M4 1h7v5H4z"/><path fill="#1b1f4a" d="M9 2h1v3H9z"/><path fill="#ffffff" d="M3 9h10v5H3z"/><path fill="#e0408a" d="M4 10h8v1H4z"/><path fill="#9aa0c0" d="M4 12h6v1H4z"/></svg><span>LOAD "APP STORE"</span><i class="cur">_</i></a>
+    </div>
   </section>
 
   <section class="shots" aria-label="Screenshots">
@@ -61,7 +64,7 @@
   <p><span data-fz>©</span> 2026 Ján Šikuta</p>
 </footer>
 
-<script src="i18n.js"></script>
+<script src="i18n.js?v=13"></script>
 <script>
 const GAMES = {
   sk: [["Pätnástka","posúvačka s háčikom v parite"],["Svetlá","zhasni všetky svetlá"],["Piškvorky","súper nerobí chyby"],["Veža","mnísi pracujú, aj keď hráš inde"],["Sisyfos","plošinovka s kameňom a kombom"],["Okruh","nočné preteky so závetrím"],["Exec","okná sa množia"],["Hydra","za každú hlavu dve"],["Stíhačka","Atari 800XL: štart z lietadlovej lode, bomby a zameriavač"],["Kosačka","Atari 800XL: pokos trávnik, pozor na psa a susedove kvety"]],
